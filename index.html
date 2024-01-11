@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="/assert/style/index.css">
+</head>
+
+<body>
+    <div id="container">
+        <h1>REGISTRATION FORM</h1>
+        <form id="myForm">
+            <div class="input-container">
+                <label for="name">Name:</label>
+                <input type="text" id="name" id="name" />
+                <small></small>
+            </div>
+
+            <div class="input-container">
+                <label for="address">Address:</label>
+                <input type="text" id="address" id="address" />
+                <small></small>
+            </div>
+            <div class="input-container">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" />
+                <small></small>
+            </div>
+            <div class="input-container">
+                <label for="password">Password:</label>
+                <input type="password" id="password" />
+                <small></small>
+            </div>
+            <div class="input-container">
+                <label for="telephone">Telephone:</label>
+                <input type="number"  id="telephone" />
+                <small></small>
+            </div>
+            <div class="input-container">
+                <label for="course">Course:</label>
+                <select id="course" id="course">
+                    <option value="btech">BTech</option>
+                    <option value="bsc">BSc</option>
+                    <option value="bcom">BCom</option>
+                    <option value="ba">BA</option>
+                </select>
+            </div>
+            <div class="input-container">
+                <label for="comment">Comment:</label>
+                <textarea name="comment" id="comment" cols="20" rows="3"></textarea>
+            </div>
+            <div id="button-container">
+                <input type="submit" value="Send" id="send" />
+                <input id="reset-btn" value="Reset" type="button" />
+            </div>
+        </form>
+    </div>
+
+    <script src="./assert/js/app.js"></script>
+</body>
+
+</html>
