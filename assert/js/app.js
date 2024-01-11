@@ -8,10 +8,8 @@ const course = document.getElementById("course");
 const comment = document.getElementById("comment");
 const resetBtn = document.getElementById("reset-btn");
 
-// checks if value is emypty
 const isRequired = value => value === '' ? false : true;
 
-// checks if the string is in between
 const isBetween = (length, min, max) => length < min || length > max ? false : true;
 
 const isValidEmail = (email) => {
@@ -19,9 +17,7 @@ const isValidEmail = (email) => {
     return re.test(email);
 }
 
-// show error message
 const showError = (input, message) => {
-    // get the form-field element
     const formField = input.parentElement;
 
     // show the error message
@@ -94,9 +90,7 @@ const checkTelephone = () => {
     }
 }
 
-
 // submit form
-
 myForm.addEventListener("submit", (e) => {
     e.preventDefault();
     let isNameValid = checkName();
@@ -107,11 +101,12 @@ myForm.addEventListener("submit", (e) => {
     const ifFormValid = isNameValid && isEmailValid && isPasswordValid && isTelephoneValid;
 
     if (ifFormValid) {
-        console.log("Regsitered!")
+        alert(`${name.value}, you're registred!`)
+        resetForm();
     }
-
 });
 
+// check for error on input change
 myForm.addEventListener("input", (e) => {
     switch (e.target.id) {
         case 'name':
